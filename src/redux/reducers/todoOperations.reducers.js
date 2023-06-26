@@ -7,9 +7,10 @@ const todoOperations = (state=initialState, action)=>{
         // add todo
         return [...state, action.payload]
     }else if (action.type === DELETE_TODO){
-        state.filter((todo, id)=>{
+        state = state.filter((todo, id)=>{
             return id !== action.payload
         })
+        return state
     }else{
         return state
     }

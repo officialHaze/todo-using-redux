@@ -20,6 +20,7 @@ function TodoInput() {
             type: ADD_TODO,
             payload: inputVal
         })
+        setInputVal("")
     }
   return (
     <div>
